@@ -309,6 +309,11 @@ footer {
 
   .carusel{
     width: 80vw;
+    height: auto;
+  }
+  .imgCarusel img{
+    height: 60vw;
+    width: auto;
   }
   .maps{
     width: 100%;
