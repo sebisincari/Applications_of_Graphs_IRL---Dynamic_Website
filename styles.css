@@ -307,6 +307,9 @@ footer {
 
 @media (max-width: 800px) {
 
+  .carusel{
+    width: 80vw;
+  }
   .maps{
     width: 100%;
     height: auto;
