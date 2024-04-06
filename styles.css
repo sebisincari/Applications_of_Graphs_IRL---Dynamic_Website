@@ -305,7 +305,7 @@ footer {
 }
 
 
-@media (max-width: 2000px) {
+@media (max-width: 768px) {
 
   .carusel{
     width: 80vw;
