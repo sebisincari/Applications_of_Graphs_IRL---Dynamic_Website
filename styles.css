@@ -21,12 +21,12 @@ header, footer {
   height: 20vw; 
 }
 
- header {
+header {
   display: flex;
   align-items: center; 
   justify-content: space-around;
   margin-top: 25px;
-  margin-left: 8px;
+  margin-left: 3px;
   height: 50vw; 
   max-height: 45px;
 } 
@@ -79,8 +79,8 @@ footer {
 }
 
 .dropdown .dropbtn{
-  height: auto;
-  width: 3vw;
+  height: 30px;
+  width: auto;
   max-height: 80px;
   background-color: transparent; 
   border: none; 
@@ -377,7 +377,7 @@ footer {
     margin-bottom: 4vw;
   }
   .dropdown .dropbtn{
-    height: 3vh;
+    height: 20px;
     width: auto;
     max-height: 50px;
   }
