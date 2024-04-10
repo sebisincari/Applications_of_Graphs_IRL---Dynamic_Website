@@ -88,11 +88,7 @@ footer {
   height: 100%;
 }
 
-.headIcon{
-  height: 2.5vw;
-  width: auto;
-  margin-right: 5px;
-}
+
 .title{
   margin: 0 auto;
 }
@@ -295,6 +291,11 @@ footer {
   width: auto;
   position: relative;
   transition: transform 2s ease;
+}
+.headIcon{
+  height: 2.5vw;
+  width: auto;
+  margin-right: 5px;
 }
 
 .footer-image:hover {
