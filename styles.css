@@ -38,7 +38,7 @@ footer {
   /* background: white;  */
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-around;
   max-height: 400px;
 }
 
