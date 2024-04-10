@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
   display: flex;
   flex-direction: column; 
@@ -78,8 +79,9 @@ footer {
 }
 
 .dropdown .dropbtn{
-  height: 80%;
+  height: 8vw;
   width: auto;
+  max-height: 80px;
   background-color: transparent; 
   border: none; 
 }
@@ -91,6 +93,9 @@ footer {
 
 .title{
   margin: 0 auto;
+  height: 10vh;
+  width: auto;
+  max-height: 100px;
 }
 .grid2{
   display: grid;
@@ -98,6 +103,14 @@ footer {
   align-items: center;
   justify-content: center;  
 
+}
+
+.grid2 p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
 }
 
 .grid2_2{
@@ -133,12 +146,21 @@ footer {
   margin-bottom: 20px;
   width: 20vw;
 }
+.secTitle2{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 80vw;
+  max-width: 1200px;
+}
 
 .grid3{
+  width: 60vw;
+  max-width: 1500px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; 
   align-items: center;
   justify-content: center; 
+  margin-bottom: 30px;
 }
 
 .img3grid{
@@ -283,7 +305,7 @@ footer {
 .author {
   display: none;
   color: white;
-  font-size: 0.8rem;
+  font-size: 2rem;
 }
 
 .footer-image {
@@ -332,6 +354,13 @@ footer {
 
 @media (max-width: 900px) {
 
+  .title{
+    height: 8vh;
+    max-height: 45px;
+  } 
+  .grid2 p {
+    font-size: 0.8rem;
+  }
   .cutie {
     width: 80vw;
     height: 80vw;
