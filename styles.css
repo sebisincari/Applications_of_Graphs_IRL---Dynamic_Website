@@ -79,8 +79,8 @@ footer {
 }
 
 .dropdown .dropbtn{
-  height: 5vh;
-  width: auto;
+  height: auto;
+  width: 3vw;
   max-height: 80px;
   background-color: transparent; 
   border: none; 
@@ -376,14 +376,15 @@ footer {
     width: 5px;
     margin-bottom: 4vw;
   }
-}
-@media (max-width: 600px)
-{
   .dropdown .dropbtn{
     height: 3vh;
     width: auto;
     max-height: 50px;
   }
+}
+@media (max-width: 600px)
+{
+  
 
   .headIcon{
     height: 3vh;
