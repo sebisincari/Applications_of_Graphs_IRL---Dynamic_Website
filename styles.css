@@ -79,7 +79,7 @@ footer {
 }
 
 .dropdown .dropbtn{
-  height: 8vw;
+  height: 5vh;
   width: auto;
   max-height: 80px;
   background-color: transparent; 
@@ -315,9 +315,11 @@ footer {
   transition: transform 2s ease;
 }
 .headIcon{
-  height: 2.5vw;
+  height: 5vh;
   width: auto;
   margin-right: 5px;
+  max-height: 80px;
+
 }
 
 .footer-image:hover {
