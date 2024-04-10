@@ -39,7 +39,7 @@ footer {
   /* background: white;  */
   display: flex;
   align-items: center;
-  justify-content: space-around;
+
   max-height: 400px;
 }
 
@@ -356,6 +356,9 @@ footer {
 
 @media (max-width: 900px) {
 
+  .author {
+    font-size: 0.8rem;
+  }
   .title{
     height: 8vh;
     max-height: 45px;
@@ -424,3 +427,23 @@ footer {
     margin-bottom: 4vw;
   }
 }
+@media (max-width: 600px)
+{
+  .dropdown .dropbtn{
+    height: 3vh;
+    width: auto;
+    max-height: 50px;
+  }
+
+  .headIcon{
+    height: 3vh;
+    width: auto;
+    max-height: 50px;
+  }
+  .title{
+    height: 3vh;
+    width: auto;
+    max-height: 30px;
+  }
+
+} 
