@@ -171,54 +171,6 @@ footer {
   align-items: center;
 }
 
-.cutie {
-  position: relative;
-  width: 30vw;
-  height: 30vw;
-  line-height: 30vw;
-  text-align: center;
-  color: #252b37;
-  background-color: #151823;
-  margin-bottom: 10vw;
-  margin-right: 3vw;
-  margin-left: 3vw;
-  animation: textColor 10s ease infinite;
-}
-
-@keyframes textColor {
-  0% {
-    color: white;
-  }
-  50% {
-    color: pink;
-  }
-  100% {
-    color: purple;
-  }
-}
-
-.cutie:after {
-  position: absolute;
-  content: "";
-  top: 5vw;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.75);
-  -webkit-filter: blur(5vw);
-  -moz-filter: blur(5vw);
-  -ms-filter: blur(5vw);
-  filter: blur(5vw);
-  background: linear-gradient(270deg, grey, pink,red, orange, violet,orange, red, pink, grey); 
-  background-size: 200% 200%;
-  animation: animateGlow 10s ease infinite;
-}
-
-
-
 .carusel{
   position: relative;
   width: 40vw;
@@ -394,9 +346,7 @@ footer {
     width: 100%;
     height: auto;
   }
-  .imagineAnimata{
-    width: 1fr;
-  }
+
   .insta {
     width: 200px; 
     height: auto;
