@@ -65,13 +65,10 @@ body {
     position: relative;
     width: 70vw;
     height: 70vh;
-    /* line-height: 70vw; */
-    color: #252b37;
+    color: white;
     background-color: #151823;
-    /* margin-bottom: 10vw; */
     margin-right: 3vw;
     margin-left: 3vw;
-    animation: textColor 10s ease infinite;
   }
   
   .cutie p{
@@ -83,17 +80,7 @@ body {
     text-align: center;
   }
 
-  @keyframes textColor {
-    0% {
-      color: white;
-    }
-    50% {
-      color: pink;
-    }
-    100% {
-      color: purple;
-    }
-  }
+  
   
   .cutie:after {
     position: absolute;
