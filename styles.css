@@ -27,7 +27,7 @@ header, footer {
   margin-top: 25px;
   margin-left: 8px;
   height: 50vw; 
-  max-height: 25px;
+  max-height: 45px;
 } 
 
 article {
@@ -36,9 +36,11 @@ article {
 
 footer {
   /* background: white;  */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
+
 
 .imagineAnimata {
   background-size: 100% auto; 
@@ -95,9 +97,10 @@ footer {
 }
 .grid2{
   display: grid;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: 450px 450px;
   align-items: center;
   justify-content: center;  
+
 }
 
 .grid2_2{
@@ -124,8 +127,8 @@ footer {
 }
 
 .maps{
-  width: auto;
-  height: 400px;
+  width: 400px;
+  height: auto;
 }
 
 .secTitle{
@@ -136,13 +139,13 @@ footer {
 
 .grid3{
   display: grid;
-  grid-template-columns: 350px 350px 350px;
+  grid-template-columns: 1fr 1fr 1fr; 
   align-items: center;
   justify-content: center; 
 }
 
 .img3grid{
-  width: 300px; 
+  width: 290px; 
   height: auto; 
   max-width: 1000px;
   justify-content: center;
@@ -280,6 +283,12 @@ footer {
   }
 }
 
+.author {
+  display: none;
+  color: white;
+  font-size: 2rem;
+}
+
 .footer-image {
   height: 20vw;
   width: auto;
@@ -289,6 +298,20 @@ footer {
 
 .footer-image:hover {
   transform: translateX(385%); 
+}
+
+.footer-image:hover + .author {
+  display: block;
+  animation: schimbaOpacitatea 3s ease-in;
+}
+
+@keyframes schimbaOpacitatea {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
 }
 
 .footer-image::before {
@@ -305,7 +328,7 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   .carusel{
     width: 80vw;
