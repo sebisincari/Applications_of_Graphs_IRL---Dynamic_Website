@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title><%= locals.title %></title>
+   <link rel="icon" href="Images/favicon.png" type="image/png">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="description" content="<%= locals.description %>">
+   <link rel="stylesheet" href="/css_files/styles.css" type="text/css">
+   <script type="text/javascript" defer src="/scripts/script.js" ></script>
+</head>
+<body>
+  <%- include('../partials/header.ejs') %>
+  <main>
+    <%- body %>
+  </main>
+  <%- include('../partials/footer.ejs') %>
+</body>
+</html>
+
