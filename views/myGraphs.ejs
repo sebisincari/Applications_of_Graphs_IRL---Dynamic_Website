@@ -1,6 +1,6 @@
 <script src="scripts/mygraphscript.js" defer></script>
 
-<!-- <form action="/submit" method="post" id="graphForm">
+<form method="submit" id="graphForm">
     <label for="graphName">Graph Name:</label>
     <br>
     <input type="text" id="graphName" name="graphName" required>
@@ -14,37 +14,20 @@
     <textarea id="edges" name="edges" rows="10" required></textarea>
     <br>
     <button type="submit">Submit</button>
-</form> -->
+</form>
 
-<!-- <a href="/dashboard">&larr; Back</a> -->
-<div class="admin-title">
-  <h2>Add New Post</h2>
-</div>
 
-<form action="/add-post" method="POST">
-
-    <label for="title"><b>Title</b></label>
-    <input type="text" placeholder="Post Title" name="title">
-  
-    <label for="body"><b>Content</b></label>
-    <textarea name="body" cols="50" rows="10"></textarea>
-  
-    <input type="submit" value="Add" class="btn">
-  
-  </form>
 
 <script src="scripts/generatePoints.js"></script>
 <ul class="post-ui">
-    <% data.forEach(post => { %>
+    <!-- <% data.forEach(post => { %>
         <li>
             <a href="#">
-                <span><%= post.title %></span>
-                <span><%= post.numOfNodes %></span>
-                <span><%= post.content %></span>
-                <span>
-                    <script>generatePointsOnCircle(8);</script>
-                </span>
+                <p><%= post.title %></p>
+                <p><%= post.numOfNodes %></p>
+                <p><%= post.content %></p>
+                <!-- <script>generatePointsOnCircle(<%= post.numOfNodes %>);</script> -->
             </a>
         </li>
-    <% }) %>
+    <% }) %> -->
 </ul>

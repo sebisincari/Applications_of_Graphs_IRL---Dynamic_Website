@@ -6,7 +6,7 @@ const connect_db = async () =>{
         console.log('MongoDB Connected: ${conn.connection.host}')
 
     }catch(error){
-        console.error('Error: ${error.message}');
+        console.error('Error: Baza de date');
     }
 
 }

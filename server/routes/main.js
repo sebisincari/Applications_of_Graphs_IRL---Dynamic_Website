@@ -40,23 +40,27 @@ router.get('/myGraphs', async(req, res) => {
     
   });
 
-  router.get('/add-post', authMiddleware, async (req, res) => {
-    try {
-      const locals = {
-        title: 'Add Post',
-        description: 'Simple Blog created with NodeJs, Express & MongoDb.'
-      }
   
-      const data = await Post.find();
-      res.render('admin/add-post', {
-        locals,
-        layout: adminLayout
-      });
+
+  // router.get('/add-post', authMiddleware, async (req, res) => {
+  //   try {
+  //     const locals = {
+  //       title: 'Add Post',
+  //       description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+  //     }
   
-    } catch (error) {
-      console.log(error);
-    }
+  //     const data = await Post.find();
+  //     res.render('admin/add-post', {
+  //       locals,
+  //       layout: adminLayout
+  //     });
   
-  });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  
+  // });
 
 module.exports = router;
+
+

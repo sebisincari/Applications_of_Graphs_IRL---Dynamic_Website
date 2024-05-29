@@ -1,5 +1,6 @@
 const graphForm = document.getElementById('graphForm');
 
+
 graphForm.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent default form submission
 
@@ -23,6 +24,8 @@ graphForm.addEventListener('submit', (event) => {
             element.value = ''; // Clear the value
         }
     }
+
+    insertPostData();
     
     // Perform any additional actions or data validation as needed
 });
