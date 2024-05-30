@@ -59,4 +59,11 @@
       </div>
       <img class="linie" src="images/linie.png" alt="Imagine">
 
+      <% data.forEach(graph => { %>
+        <a href="/post/<%= graph.id %>">
+          <div class="graph">
+            <h2><%= graph.title %></h2>
+        </a>
+      <% }) %>
+
   </main>
