@@ -57,24 +57,24 @@ router.post('/admin', async (req, res) => {
 
 //Admin - Register
 router.post('/register', async (req, res) => {
+  try {
+    const { username, password } = req.body;
+    const hashedPassword = await bcrypt.hash(password, 10);
+
     try {
-      const { username, password } = req.body;
-      const hashedPassword = await bcrypt.hash(password, 10);
-  
-      try {
-        const user = await User.create({ username, password:hashedPassword });//in database will be saved the hashed password
-        res.status(201).json({ message: 'User Created', user });//the request has succeeded
-      } catch (error) {
-        if(error.code === 11000) { //duplicate key error in mongodb
-          res.status(409).json({ message: 'User already in use'});//used to indicate a conflict with the current state of a resource
-        }
-        res.status(500).json({ message: 'Internal server error'})//the server has encountered an unexpected condition or configuration problem
-      }
-  
+      const user = await User.create({ username, password:hashedPassword });
+      res.status(201).redirect('/admin');
     } catch (error) {
-      console.log(error);
+      if(error.code === 11000) {
+        res.status(409).json({ message: 'User already in use'});
+      }
+      res.status(500).json({ message: 'Internal server error'})
     }
-  });
+
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 //Funcția authMiddleware este un middleware de autentificare într-o aplicație Express.js. 
 //Aceasta verifică dacă există un token JWT (JSON Web Token) în cookies-urile cererii (request).
@@ -84,21 +84,47 @@ const authMiddleware = (req, res, next ) => {
   const token = req.cookies.token;
 
   if(!token) {
-    return res.status(401).json( { message: 'Unauthorized'} );
+    return res.status(401).json( { message: 'Unauthorized 1'} );
   }
 
   try {
     const decoded = jwt.verify(token, jwtSecret);
+    console.log(decoded);
     req.userId = decoded.userId;
     next();
   } catch(error) {
-    res.status(401).json( { message: 'Unauthorized'} );
+    res.status(401).json( { message: 'Unauthorized 2'} );
   }
 }
 
 
+
 //Admin - Dashboard
-  router.get('/dashboard', authMiddleware, async (req, res) => {
+router.get('/dashboard', authMiddleware, async (req, res) => {
+  try {
+    const locals = {
+      title: 'Dashboard',
+      description: 'Simple Blog created with NodeJs, Express & MongoDb.'
+    };
+
+    const data = await Post.find();
+
+    //console.log(req.decoded);
+    res.render('admin/dashboard', {
+      locals,
+      data,
+      userId: req.userId, // Trimite obiectul user către șablon
+      layout: adminLayout
+    });
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).send('Internal Server Error 4');
+  }
+});
+
+//Admin dashboard - Register
+  router.get('/register', async (req, res) => {
     try {
       const locals = {
         title: 'Dashboard',
@@ -106,9 +132,10 @@ const authMiddleware = (req, res, next ) => {
       }
   
       const data = await Post.find();
-      res.render('admin/dashboard', {
+      res.render('admin/register', {
         locals,
         data,
+        //userId: req.decoded.userId, // Trimite obiectul user către șablon
         layout: adminLayout
       });
   
@@ -117,6 +144,18 @@ const authMiddleware = (req, res, next ) => {
     }
   
   });
+
+
+
+
+
+
+
+
+
+
+
+
 
 //Create new post
   router.get('/add-post', authMiddleware, async (req, res) => {
@@ -149,7 +188,8 @@ router.post('/add-post', authMiddleware, async (req, res) => {
     const newPost = new Post({
       title: title,
       numOfNodes: parseInt(numOfNodes),
-      edgesList: edgesArray
+      edgesList: edgesArray,
+      userId: req.userId
     });
 
     await newPost.save(); // Salvează instanța nou creată a modelului Post în baza de date
@@ -180,5 +220,21 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+
+router.get('/*', async (req, res) => {
+  const locals = {
+    title: 'Applicability of graphs IRL',
+    description: 'This is the home page of the Applicability of graphs IRL project.'
+  };
+
+  try {
+    // Set status to 404 and render the custom 404 page
+    res.status(404).render('404', { locals: locals });
+  } catch (error) {
+    console.log(error);
+    // Optional: Render a generic error page in case something goes wrong
+    res.status(500).render('error', { error: error });
+  }
+});
 
 module.exports = router;
