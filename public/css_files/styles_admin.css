@@ -2,6 +2,8 @@
 body {
   display: flex;
   flex-direction: column; 
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
   margin: 0;
@@ -54,17 +56,136 @@ body {
 }
 
 .login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    padding: 20px;
-    /* background: white; */
-    border-radius: 10px;
-    border-color: blueviolet;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    width: 50vw;
-    height: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: linear-gradient(pink, purple);
+  backdrop-filter: blur(50px); 
+  -webkit-backdrop-filter: blur(50px);
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 50vw;
+  height: 80vh;
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+.login h1{
+  font-size: 3em;
+  margin: 10px;
+}
+
+.login form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px; /* Max width for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  width: 100%;
+  max-width: 500px; /* Max width for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  /* background-color: #f9f9f9; Background color for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login label {
+  font-size: 1.2em; /* Larger font size for labels */
+  margin-bottom: 10px;
+  display: block; /* Ensure labels are on their own line */
+}
+
+.input, input[type="password"], .btn {
+  width: 80%; /* Set the width of input fields to 80% */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 4px; /* Rounded corners for input fields */
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  font-size: 1em; /* Font size for input fields */
+}
+
+.input:focus, input[type="password"]:focus {
+  border-color: #66afe9; /* Border color when focused */
+  outline: none; /* Remove outline */
+  box-shadow: 0 0 5px rgba(102, 175, 233, 0.5); /* Shadow when focused */
+}
+
+.btn {
+  background-color: violet; /* Background color for submit button */
+  color: white; /* Text color for submit button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Cursor style */
+}
+
+.btn:hover {
+  background-color: purple; /* Background color on hover */
+}
+
+.regbtn{
+  display: flex;
+  justify-content: center;
+  color: white; /* Setează culoarea linkurilor la alb */
+  text-decoration: none;
+  background-color: black; /* Background color for submit button */
+  width: 80%; /* Set the width of input fields to 80% */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid black; /* Border for input fields */
+  border-radius: 4px; /* Rounded corners for input fields */
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  font-size: 1em;
+}
+
+.regbtn:hover {
+  background-color: violet; /* Background color on hover */
+}
+
+.deleteBtn{
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 8px;
+}
+.dashboardElem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: linear-gradient(pink, purple);
+  backdrop-filter: blur(100px); 
+  -webkit-backdrop-filter: blur(100px);
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 50vw;
+  height: auto;
+  list-style: none;
+  padding: 10px;
+  margin: 10px;
+}
+.dashboardElem li{
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 98%;
+  background: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); /
+}
+.dashboardElem form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

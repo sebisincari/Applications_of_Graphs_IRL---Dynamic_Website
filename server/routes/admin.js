@@ -145,18 +145,6 @@ router.get('/dashboard', authMiddleware, async (req, res) => {
   
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
 //Create new post
   router.get('/add-post', authMiddleware, async (req, res) => {
     try {
@@ -188,7 +176,7 @@ router.post('/add-post', authMiddleware, async (req, res) => {
     const newPost = new Post({
       title: title,
       numOfNodes: parseInt(numOfNodes),
-      edgesList: edgesArray,
+      edgesList: Array.isArray(edgesList) ? edgesList.map(edge => [parseInt(edge[0]), parseInt(edge[1])]) : [],
       userId: req.userId
     });
 

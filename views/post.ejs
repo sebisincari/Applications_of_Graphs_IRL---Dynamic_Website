@@ -1,3 +1,53 @@
 <h1><%= data.title %></h1>
 <p><%= data.numOfNodes %> noduri</p>
 <p><%= data.edgesList %> muchii</p>
+
+<script data-num-of-nodes="<%= data.numOfNodes %>" data-edges-list="<%= JSON.stringify(data.edgesList) %>">
+  const numOfNodes = parseInt(document.currentScript.getAttribute('data-num-of-nodes'));
+  const edgesList = JSON.parse(document.currentScript.getAttribute('data-edges-list'));
+
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", "100%");
+  svg.setAttribute("viewBox", "0 0 100 100");
+
+  const centerX = 50;
+  const centerY = 50;
+  const radius = 20;
+  const angleIncrement = (2 * Math.PI) / numOfNodes;
+
+  const nodes = [];
+
+  for (let i = 0; i < numOfNodes; i++) {
+    const angle = i * angleIncrement;
+    const x = centerX + radius * Math.cos(angle);
+    const y = centerY + radius * Math.sin(angle);
+
+    nodes.push({ x, y });
+
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", x);
+    circle.setAttribute("cy", y);
+    circle.setAttribute("r", "1");
+    circle.setAttribute("fill", "black");
+
+    svg.appendChild(circle);
+  }
+
+  edgesList.forEach(edge => {
+    const [start, end] = edge.map(index => index - 1); // Ajustează indicii nodurilor
+    if (start >= 0 && start < numOfNodes && end >= 0 && end < numOfNodes) {
+      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+      line.setAttribute("x1", nodes[start].x);
+      line.setAttribute("y1", nodes[start].y);
+      line.setAttribute("x2", nodes[end].x);
+      line.setAttribute("y2", nodes[end].y);
+      line.setAttribute("stroke", "black");
+      line.setAttribute("stroke-width", "0.5");
+
+      svg.appendChild(line);
+    }
+  });
+
+  document.body.appendChild(svg);
+</script>
