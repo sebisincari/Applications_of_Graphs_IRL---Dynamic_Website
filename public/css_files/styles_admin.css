@@ -355,6 +355,6 @@ body {
   width: 100%;
   padding: 10px;
   justify-self: center; /* Aliniați pe axa orizontală */
-  align-self: center; /* Aliniați pe axa verticală */
+  align-self: center; 
   position: relative;
 }
