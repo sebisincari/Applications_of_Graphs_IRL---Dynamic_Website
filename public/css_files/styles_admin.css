@@ -23,7 +23,7 @@ body {
   
   header, footer {
     height: 20vw;
-    width: 99vw; 
+    width: 95vw; 
   }
   
   header {
@@ -155,37 +155,205 @@ body {
   padding: 5px;
   margin: 8px;
 }
-.dashboardElem{
+.dashboardElem {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: linear-gradient(pink, purple);
-  backdrop-filter: blur(100px); 
-  -webkit-backdrop-filter: blur(100px);
-  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   width: 50vw;
-  height: auto;
-  list-style: none;
-  padding: 10px;
-  margin: 10px;
+  height: 75vh;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
 }
-.dashboardElem li{
-  list-style-type: none;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid black;
+
+.admin-title {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.admin-title h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.admin-title .button {
+  background-color: violet;
+  color: white;
+  border: none;
+  padding: 10px 20px;
   border-radius: 5px;
-  width: 98%;
-  background: rgba(255, 255, 255, 0.5); 
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); /
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
 }
-.dashboardElem form{
+
+.admin-title .button:hover {
+  background-color: purple;
+}
+
+.dashboardElem ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrare pe axa orizontală */
+}
+
+.dashboardElem li {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 80%; /* Lățime redusă pentru a centra elementele */
+  display: flex;
+  justify-content: space-between; /* Aliniere buton la dreapta */
+  align-items: center; /* Centrare pe axa verticală */
+}
+
+.dashboardElem a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+
+.dashboardElem a:hover {
+  text-decoration: underline;
+}
+
+.deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: auto; /* Mută butonul la dreapta */
+}
+
+.deleteBtn:hover {
+  background: darkred;
+}
+
+.postare{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 50vw;
+  height: 75vh;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.postare h1{
+  font-size: 2em;
+  color: black;
+  margin: 0;
+}
+
+.postare svg{
+  width: 70vh;
+  height: 70vh;
+}
+
+.newgraph{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 50vw;
+  height: 75vh;
+  max-width: 800px;
+  padding: 20px;
+  margin: 20px;
+  color: white;
+}
+
+.newgraph h1{
+  font-size: 2em;
+  color: black;
+  margin: 0;
+}
+
+.newgraph form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px; /* Max width for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  width: 90%;
+  max-width: 500px; /* Max width for the form */
+  margin: 0 auto; /* Center the form */
+  padding: 20px;
+  /* background-color: #f9f9f9; Background color for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newgraph input{
+  width: 80%; /* Set the width of input fields to 80% */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 4px; /* Rounded corners for input fields */
+  box-sizing: border-box; /* Ensure padding doesn't increase width */
+  font-size: 1em; /* Font size for input fields */
+
+}
+
+.newgraph button{
+  background-color: violet; /* Background color for submit button */
+  color: white; /* Text color for submit button */
+  border: none; /* Remove border */
+  cursor: pointer; /* Cursor style */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.newgraph button:hover {
+  background-color: purple; /* Background color on hover */
+}
+
+.newgraph .noduriPereche{
+  display: grid;
+  grid: 45% 45% / 50% 50%;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.inputNod{
+  padding: 10px;
+  align-self: center;
 }

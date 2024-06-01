@@ -1,20 +1,21 @@
-<div class="admin-title">
-        <h2>Your Graphs</h2>
-        <a href="/add-post" class="button">+ Add New Graph</a>
-</div>
-  
-<ul class="dashboardElem">
+<div class="dashboardElem">
+  <div class="admin-title">
+          <h2>Your Graphs</h2>
+          <a href="/add-post" class="button">+ Add New Graph</a>
+  </div>
+    
+  <ul>
 
-  <% data.forEach(post => { %>
-    <% if (post.userId == userId) { %>
-      <li>
-        <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
-
-          <a href="/post/<%= post._id %>"><%= post.title %> &nearr;</a>
+    <% data.forEach(post => { %>
+      <% if (post.userId == userId) { %>
+        <li>
+          <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
+            <a href="/post/<%= post._id %>"><%= post.title %> &nearr;</a>
+          </form>
           <input type="submit" value="Delete" class="deleteBtn">
+        </li>
+      <% } %>
+    <% }) %>
+  </ul>
+</div>
 
-        </form>
-      </li>
-    <% } %>
-  <% }) %>
-</ul>

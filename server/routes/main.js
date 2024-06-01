@@ -23,26 +23,6 @@ router.get('', async(req, res) => {
 
 // GET; Post: id
 
-router.get('/post/:id', async(req, res) => {
-
-  
-
-  try{
-
-    let slug = req.params.id;
-
-    const data = await Post.findById({_id: slug});//find graph by id
-
-    const locals = {
-      title: data.title,
-      description: 'This is the page with one of yours garph'
-    }
-
-    res.render('post', {data: data, locals: locals});
-  }catch(error){
-    console.log(error);
-  }
-});
 
 
 module.exports = router;
