@@ -88,7 +88,7 @@ let edgeIndex = 0;
     document.getElementById('graph-container').appendChild(svg);
   
   }catch(error){
-      console.log(error);
+      console.log('Ajunge aici');
     }
 
     
