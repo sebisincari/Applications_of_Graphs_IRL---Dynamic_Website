@@ -10,7 +10,7 @@ Applications_of_Graphs_IRL este o platformă web dedicată explorării și vizua
 - **Creare de conturi personalizate:** Utilizatorii pot să-și creeze conturi personalizate pentru a avea acces la funcționalități avansate ale platformei. Informațiile de cont sunt stocate într-o bază de date MongoDB.
 - **Interfață prietenoasă:** Interfața intuitivă și prietenoasă a platformei facilitează utilizatorilor explorarea și interacțiunea cu grafurile.
 - **Vizualizare și creare de grafuri personalizate:** Utilizatorii pot să creeze și să vizualizeze grafuri personalizate folosind instrumentele interactive ale platformei.
-- **Generare automată de SVG-uri:** Pentru fiecare cont creat, platforma generează automat SVG-uri reprezentând grafurile asociate cu acel cont. Grafurile sunt stocate și gestionate într-o bază de date MongoDB.
+- **Generarea de grafuri:** Fiecarui cont creat ii este atribuit o lista de SVG-uri reprezentând grafurile asociate cu acel cont. Grafurile sunt stocate și gestionate într-o bază de date MongoDB.
 
 ## Tehnologii folosite
 
