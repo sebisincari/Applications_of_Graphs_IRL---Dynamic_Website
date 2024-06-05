@@ -1,4 +1,4 @@
-# GrafXplor - Explorarea Grafurilor
+# Applications of Graphs in Real Life
 
 ## Descriere
 
