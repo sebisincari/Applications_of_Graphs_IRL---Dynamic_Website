@@ -36,6 +36,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', require('./server/routes/main'));
 app.use('/', require('./server/routes/admin'));
+app.use('/', require('./server/routes/404'));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

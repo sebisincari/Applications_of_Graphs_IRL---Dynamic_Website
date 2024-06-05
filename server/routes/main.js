@@ -11,41 +11,10 @@ router.get('', async(req, res) => {
     }
 
     try{
-      const data = await Post.find();//find all posts
-      res.render('index', {data: data, locals: locals});
+      res.render('index', {locals: locals});
     }catch(error){
       console.log(error);
     }
   });
 
-
-
-
-// GET; Post: id
-
-
-
 module.exports = router;
-
-
-
-
-
-//  function insertPostData(){
-//   Post.insertMany([
-//     {
-//       title: 'First Graph',
-//       numOfNodes: 5,
-//       edgesList: [
-//         [0, 1],
-//         [1, 2],
-//         [2, 3],
-//         [3, 4],
-//         [4, 0]
-//       ]
-//     }
-//   ])
-// }
-
-//insertPostData();
-

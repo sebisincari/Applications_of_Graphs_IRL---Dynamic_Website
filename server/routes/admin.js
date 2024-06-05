@@ -11,8 +11,6 @@ const jwtSecret = process.env.JWT_SECRET;
 //Admin login page
 
 router.get('/admin', async(req, res) => {
-
-
     try{
         const locals = {
             title: 'Admin',
@@ -223,23 +221,6 @@ router.get('/logout', (req, res) => {
   res.clearCookie('token');
   //res.json({ message: 'Logout successful.'});
   res.redirect('/');
-});
-
-
-router.get('/*', async (req, res) => {
-  const locals = {
-    title: 'Applicability of graphs IRL',
-    description: 'This is the home page of the Applicability of graphs IRL project.'
-  };
-
-  try {
-    // Set status to 404 and render the custom 404 page
-    res.status(404).render('404', { locals: locals });
-  } catch (error) {
-    console.log(error);
-    // Optional: Render a generic error page in case something goes wrong
-    res.status(500).render('error', { error: error });
-  }
 });
 
 module.exports = router;

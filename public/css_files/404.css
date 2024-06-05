@@ -1,0 +1,45 @@
+body {
+    background-color: #1c1c1c;
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+    background: #2c2c2c;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin: 0 0 0.5em;
+    color: #8a2be2; /* Mov */
+  }
+  
+  p {
+    font-size: 1.2em;
+    margin: 0 0 1em;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #8a2be2; /* Mov */
+    font-weight: bold;
+    border: 2px solid #8a2be2;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a:hover {
+    background-color: #8a2be2;
+    color: #fff;
+  }
+  
