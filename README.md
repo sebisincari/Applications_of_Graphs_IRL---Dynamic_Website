@@ -17,6 +17,7 @@ Applications_of_Graphs_IRL este o platformă web dedicată explorării și vizua
 - **Node.js:** Platforma este construită utilizând Node.js pentru gestionarea backend-ului.
 - **Express.js:** Framework-ul Express.js este folosit pentru gestionarea rutei și a logicii backend.
 - **MongoDB:** Baza de date MongoDB este folosită pentru stocarea conturilor utilizatorilor și a grafurilor asociate.
+- **EJS:** Pe partea de frontend am folosit EJS fiind mai facil si eficient in ceea ce priveste SEO
 
 ## Cum să rulezi platforma local
 
