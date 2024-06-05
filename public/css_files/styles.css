@@ -121,7 +121,7 @@ footer {
 }
 
 .insta{
-  background-image: url('images/instaContent.jpg');
+  background-image: url('../images/instaContent.jpg');
   background-size: 55.5% auto;
   background-position: center;
   background-repeat: no-repeat;

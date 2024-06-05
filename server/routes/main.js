@@ -17,4 +17,18 @@ router.get('', async(req, res) => {
     }
   });
 
+// About page route
+router.get('/about', async(req, res) => {
+    const locals = {
+      title: 'About',
+      description: 'This is the about page of the Applicability of graphs IRL project.'
+    }
+
+    try{
+      res.render('/aboutMe', {locals: locals});
+    }catch(error){
+      console.log(error);
+    }
+  });
+
 module.exports = router;

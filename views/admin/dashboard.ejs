@@ -5,14 +5,14 @@
   </div>
     
   <ul>
-
     <% data.forEach(post => { %>
       <% if (post.userId == userId) { %>
         <li>
           <form action="/delete-post/<%= post._id %>?_method=DELETE" method="POST">
             <a href="/post/<%= post._id %>"><%= post.title %> &nearr;</a>
+            <input type="submit" value="Delete" class="deleteBtn">
           </form>
-          <input type="submit" value="Delete" class="deleteBtn">
+          
         </li>
       <% } %>
     <% }) %>

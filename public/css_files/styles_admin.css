@@ -209,6 +209,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center; /* Centrare pe axa orizontală */
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.dashboardElem ul::-webkit-scrollbar {
+  display: none;
 }
 
 .dashboardElem li {
@@ -220,15 +228,20 @@ footer {
   padding: 10px;
   margin: 10px 0;
   width: 80%; /* Lățime redusă pentru a centra elementele */
-  display: flex;
-  justify-content: space-between; /* Aliniere buton la dreapta */
-  align-items: center; /* Centrare pe axa verticală */
 }
 
 .dashboardElem a {
   color: white;
   text-decoration: none;
   font-size: 1.2em;
+}
+
+.dashboardElem form{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.dashboardElem form a{
+  grid-column: 1 / span 4;
 }
 
 
@@ -297,6 +310,10 @@ footer {
   padding: 20px;
   margin: 20px;
   color: white;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
 .newgraph h1{
@@ -321,6 +338,11 @@ footer {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.dashboardElem ul::-webkit-scrollbar {
+  display: none;
+}
+
 
 .newgraph input{
   width: 80%; /* Set the width of input fields to 80% */

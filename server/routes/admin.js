@@ -10,6 +10,10 @@ const jwtSecret = process.env.JWT_SECRET;
 
 //Admin login page
 
+//GET este folosit la interogare
+//POST este folosit pentru a trimite date către server pentru a fi procesate
+//PUT 
+
 router.get('/admin', async(req, res) => {
     try{
         const locals = {
@@ -186,7 +190,7 @@ router.post('/add-post', authMiddleware, async (req, res) => {
     const { title, numOfNodes, edgesList } = req.body;
     
     // Transformăm edgesList în array de perechi de numere
-    const edgesArray = edgesList.map(edge => [parseInt(edge[0]), parseInt(edge[1])]);
+    //const edgesArray = edgesList.map(edge => [parseInt(edge[0]), parseInt(edge[1])]);
 
     const newPost = new Post({
       title: title,
