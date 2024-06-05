@@ -2,7 +2,7 @@
 
 ## Descriere
 
-GrafXplor este o platformă web dedicată explorării și vizualizării grafurilor. Aici, utilizatorii pot să-și creeze conturi, să exploreze conceptele de bază ale grafurilor, să creeze și să vizualizeze grafuri personalizate, și să interacționeze cu o comunitate pasionată de domeniul grafurilor.
+Applications_of_Graphs_IRL este o platformă web dedicată explorării și vizualizării grafurilor. Aici, utilizatorii pot să-și creeze conturi, să exploreze conceptele de bază ale grafurilor, să creeze și să vizualizeze grafuri personalizate, și să interacționeze cu o comunitate pasionată de domeniul grafurilor.
 
 ## Caracteristici principale
 
